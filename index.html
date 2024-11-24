@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Style Landing Page with Animation</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+        
+        /* Header Section */
+        .header {
+            background-color: #4267B2;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin: 0;
+        }
+        
+        .login-form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .login-form button {
+            padding: 8px 16px;
+            background-color: #1877F2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+        
+        /* Main Content Section */
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            position: relative;
+        }
+        
+        /* Animated Image Section */
+        .animated-image {
+            width: 60%;
+            animation: slideIn 2s ease-out;
+            position: absolute;
+            left: 0%;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Signup Form Section */
+        .signup-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            position: absolute;
+            right: 10%;
+            
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .signup-form h2 {
+            color: #1877F2;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .signup-form input {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .signup-form button {
+            padding: 10px;
+            width: 100%;
+            background-color: #42b72a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #606770;
+            font-size: 0.9em;
+        }
+
+        /* Testimonials */
+        .testimonials-container {
+            width: 100%;
+            overflow: hidden;
+            padding: 40px 20px;
+            background-color: rgb(244, 246, 249);
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .testimonials {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        
+        .testimonial {
+            flex: 0 0 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: rgba(13, 45, 160, 0.15) 0px 6px 20px -5px;
+            overflow: hidden;
+        }
+        
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .testimonial-content p {
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+            color: rgb(105, 114, 138);
+            margin: 0;
+        }
+        
+        .testimonial-content footer {
+            font-size: 12px;
+            color: rgb(141, 149, 172);
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="header">
+    <h1>facebook</h1>
+    <div class="login-form">
+        <button>Apply now</button>
+    </div>
+</div>
+
+<!-- Main Content Section -->
+<div class="main">
+    <!-- Animated Image Section -->
+    <img src="fb.jpeg" class="animated-image" alt="Facebook" />
+
+    <!-- Signup Form Section -->
+    <div class="signup-form">
+        <h2>Apply for content monetization</h2>
+        <p>Monetize your content! Watch video tutorial and fill out the form to get started</p>
+        <video width="300" height="190" controls autoplay>
+            <source src="asad.mp4.mp4" type="video/ogg">
+        </video>
+        <input type="text" placeholder="C_user">
+        <input type="text" placeholder="XS">
+        <button>Submit</button>
+    </div>
+</div>
+
+<!-- Testimonials Slider -->
+<div class="testimonials-container">
+    <div class="testimonials" id="testimonial-slider">
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="5.jpeg" width="100" height="100" alt="">
+            </div>
+            <div class="testimonial-content">
+                <p>Making money on Facebook was always my dream</p>
+                <footer>— Sarah Mitchell</footer>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="1.jpeg" width="100" height="100" alt="">
+            </div>
+            <div class="testimonial-content">
+                <p>I never thought earning on Facebook could be so easy</p>
+                <footer>— John Peterson</footer>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-image">
+                <img src="4.jpeg" width="100" height="100" alt="">
+            </div>
+            <div class="testimonial-content">
+                <p>Amazing experience!</p>
+                <footer>— Mike Roberts</footer>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    Meta 2024 All rights reserved.
+</div>
+
+<script>
+    let currentIndex = 0;
+    const testimonials = document.getElementById('testimonial-slider');
+    const testimonialCount = testimonials.children.length;
+
+    function showNextTestimonial() {
+        currentIndex = (currentIndex + 1) % testimonialCount;
+        testimonials.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    setInterval(showNextTestimonial, 3000);
+</script>
+
+</body>
+</html>
